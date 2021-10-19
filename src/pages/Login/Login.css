@@ -1,0 +1,8 @@
+.google-logo {
+    font-size: 1.5rem;
+}
+
+.google-hover:hover {
+    background-color: white;
+    color: black;
+}

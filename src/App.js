@@ -6,11 +6,17 @@ import Contact from './pages/Contact/Contact';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
+import AuthProvider from './contexts/AuthProvider';
+import initializeAuthentication from './firebase/firebase.init';
+import Login from './pages/Login/Login';
+import Services from './pages/Home/Services/Services';
+
+initializeAuthentication();
 
 function App() {
   return (
     <>
-      <div>
+      <AuthProvider>
         <Router>
           <Header />
 
@@ -28,6 +34,10 @@ function App() {
               <Contact />
             </Route>
 
+            <Route path="/login">
+              <Login />  
+            </Route>
+
             <Route path="*">
               <NotFound />
             </Route>
@@ -36,7 +46,7 @@ function App() {
 
           <Footer />
         </Router>
-      </div>
+      </AuthProvider>
     </>
   );
 }
