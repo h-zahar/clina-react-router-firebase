@@ -2,3 +2,7 @@
     background-color: #3a3b6d;
     box-shadow: 4px -4px 4px #6a6bbf;
 }
+
+.set-img-width {
+    min-width: 200px;
+}

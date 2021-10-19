@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound/NotFound';
 import AuthProvider from './contexts/AuthProvider';
 import initializeAuthentication from './firebase/firebase.init';
 import Login from './pages/Login/Login';
-import Services from './pages/Home/Services/Services';
+import Booking from './pages/PrivateRoute/Booking/Booking';
 
 initializeAuthentication();
 
@@ -36,6 +36,10 @@ function App() {
 
             <Route path="/login">
               <Login />  
+            </Route>
+            
+            <Route path="/book/:bookId">
+              <Booking />
             </Route>
 
             <Route path="*">

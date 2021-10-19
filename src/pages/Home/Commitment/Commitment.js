@@ -10,13 +10,13 @@ const Commitment = () => {
             <div className="commitment-container">
                 <Container>
                     <Row>
-                        <Col xs={12} lg={6}>
-                            <div style={{marginTop: '-75px'}}>
-                                <img src="./images/founder/founder.png" alt="" />
+                        <Col xs={12} md={6}>
+                            <div className="set-img-width" style={{marginTop: '-75px'}}>
+                                <img className="w-100" src="./images/founder/founder.png" alt="" />
                             </div>
                         </Col>
 
-                        <Col xs={12} lg={6} className="mt-5 pt-5 pb-5 d-flex justify-content-center">
+                        <Col xs={12} md={6} className="mt-5 pt-5 pb-5 d-flex justify-content-center">
                             <div className="text-center text-light">
                                 <h1 className="mb-5">Greetings to our Family & Phychic Consulting</h1>
                                 <p className="fs-5 fw-bold">It's my goal to create a comfortable, safe environment, where we'll work to achieve the goal together.</p>

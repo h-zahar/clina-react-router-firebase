@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { HashLink, NavHashLink } from 'react-router-hash-link';
-import Logo from '../../../logo.svg';
+import { HashLink } from 'react-router-hash-link';
+import Logo from './logo.svg';
 import './Header.css';
 
 const Header = () => {
@@ -12,15 +12,15 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container fluid className="px-5 py-3">
                     <LinkContainer exact to="/">
-                        <Navbar.Brand className="ms-lg-5">
-                        <img
+                        <Navbar.Brand className="ms-lg-5 d-flex align-items-center">
+                        <img style={{borderRadius: '40px'}}
                             alt=""
                             src={Logo}
                             width="38"
                             height="38"
                             className="d-inline-block align-center"
                             />{' '}
-                        <span className="brand">Clina</span>
+                        <span className="brand ms-2">Clina</span>
                         </Navbar.Brand>
                     </LinkContainer>
 
