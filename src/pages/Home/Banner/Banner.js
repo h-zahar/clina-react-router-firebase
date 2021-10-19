@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../../Home/Home/Home.css';
 
 const Banner = () => {
     return (
@@ -12,7 +13,7 @@ const Banner = () => {
                             <p style={{color:"#9b9faa"}} className="text-uppercase">You are Important, We care for You</p>
                             <h1 className="mb-4">Welcome to <span className="brand">Clina</span></h1>
                             <p className="pt-3">Having issues with your mind? We are here as your home psychiatric counselor. Don't feel ashamed to be healed.</p>
-                            <Link style={{color: 'unset', textDecoration: 'unset'}} to="/services"><Button className="brand-bg shadow-lg mt-4 mb-4 border-0 rounded" variant="light">Explore</Button></Link>
+                            <Link style={{color: 'unset', textDecoration: 'unset'}} to="/services"><Button className="brand-bg default-btn shadow-lg mt-4 mb-4 border-0 rounded" variant="light">Explore</Button></Link>
                         </div> 
                     </div>
                 </div>
