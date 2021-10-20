@@ -3,7 +3,6 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ServiceCart = (props) => {
-    console.log(props.cart);
     const {id, img, title, description} = props.cart;
     return (
             <Col xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center">

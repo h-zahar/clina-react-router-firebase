@@ -1,0 +1,18 @@
+.bg-footer {
+    background-color: rgb(13, 16, 31);
+}
+
+.foo a {
+    text-decoration: none;
+    color: unset;
+}
+
+.foo a:hover {
+    color: unset;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+.hov-link:hover {
+    color: white;
+}

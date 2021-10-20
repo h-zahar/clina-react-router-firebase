@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
-    const { signInWithGoogle, setEmail, setPassword, setUser, createUser, setIsLoading } = useAuth();
+    const { user, signInWithGoogle, setEmail, setPassword, setUser, createUser, setIsLoading, updateUserName, setName } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -16,6 +16,10 @@ const Register = () => {
 
     const handlePass = (e) => {
         setPassword(e.target.value);
+    }
+
+    const handleName =(e) => {
+        setName(e.target.value);
     }
 
     const handleGoogleSignIn = () => {
@@ -32,6 +36,7 @@ const Register = () => {
         createUser()
         .then(result => {
             setUser(result.user);
+            updateUserName();
             history.push(redirect_url);
         })
         .finally(() => setIsLoading(false));
@@ -43,6 +48,15 @@ const Register = () => {
                 <div className="shadow-lg p-5 rounded" style={{width: '300px'}}>
                     <Form onSubmit={handleSubmit} variant="dark">
                         <h3 className="brand text-center mb-4">Register</h3>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control onBlur={handleName} type="text" placeholder="Enter email" />
+                        <Form.Text className="text-muted">
+                        We'll never share your Name with anyone else.
+                        </Form.Text>
+                    </Form.Group>
+
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
