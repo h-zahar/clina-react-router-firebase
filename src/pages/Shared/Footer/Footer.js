@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div>
                 <div style={{boxShadow: '-2px -2px 10px black'}} className="d-flex justify-content-center bg-footer text-light">
-                <div className="mt-5 d-flex d-flex-md-row flex-column justify-content-center align-items-center">
+                <div className="mt-5 d-flex d-flex-md-row flex-md-row flex-column justify-content-center align-items-center">
                     <div className="mx-3 mb-4 mb-md-0">
                         <ul className="p-0" style={{color: 'gray', listStyle: 'none'}}>
                                 <li>

@@ -15,9 +15,9 @@ const About = () => {
                     <Col xs={12} md={6} className="d-flex align-items-center">
                         <div>
                             <h1 className="title-text my-4">About <span className="brand">Clina</span></h1>
-                            <p>Ribeye pork chop spare ribs, short loin cupim shoulder beef ribs pig shank corned beef boudin fatback ham. Biltong sausage short ribs fatback turducken frankfurter swine chicken. Capicola brisket venison picanha fatback pastrami, short ribs sirloin
-
-                            Corned beef boudin landjaeger prosciutto kielbasa. Prosciutto brisket drumstick sausage pork chop landjaeger corne beef chuck filet mignon ham hock fatback.</p>
+                            <p><span className="brand">Clina</span> is a health facility that is primarily focused on the care of outpatients. Clinics can be privately operated or publicly managed and funded. They typically cover the primary care needs of populations in local communities, in contrast to larger hospitals which offer more specialised treatments and admit inpatients for overnight stays.
+                            <br /><br />
+                            Most commonly, the English word clinic refers to a general practice, run by one or more general practitioners offering small therapeutic treatments, but it can also mean a specialist clinic. Some clinics retain the name "clinic" even while growing into institutions as large as major hospitals or becoming associated with a hospital or medical school.</p>
 
                             <div className="d-flex flex-wrap justify-content-start mt-5 mb-2 text-center">
                                 <div className="me-3">
