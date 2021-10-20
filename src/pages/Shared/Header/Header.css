@@ -6,3 +6,11 @@
 .brand-bg {
     background-color: #6a6bbf;
 }
+
+.hov-logout {
+    color: white;
+}
+
+.hov-logout:hover {
+    color: gray;
+}

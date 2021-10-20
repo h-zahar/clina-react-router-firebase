@@ -3,12 +3,12 @@ import { Accordion, Col, Container, Row } from 'react-bootstrap';
 
 const Faq = () => {
     return (
-        <div id="faq" className="bg-semilight">
+        <div id="faq" className="bg-light">
             <Container>
             <Row>
                 <h2 className="text-center text-title my-5 py-5">Frequently Asked Questions</h2>
                 <Col xs={12} md={6}>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion className="shadow-lg" defaultActiveKey="">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>
                             

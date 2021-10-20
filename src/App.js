@@ -10,6 +10,7 @@ import AuthProvider from './contexts/AuthProvider';
 import initializeAuthentication from './firebase/firebase.init';
 import Login from './pages/Login/Login';
 import Booking from './pages/PrivateRoute/Booking/Booking';
+import Register from './pages/Resgister/Register';
 
 initializeAuthentication();
 
@@ -40,6 +41,10 @@ function App() {
             
             <Route path="/book/:bookId">
               <Booking />
+            </Route>
+
+            <Route path="/register">
+              <Register />
             </Route>
 
             <Route path="*">

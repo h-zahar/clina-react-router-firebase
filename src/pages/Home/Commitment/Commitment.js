@@ -24,8 +24,8 @@ const Commitment = () => {
 								I am a certified specialist in the branch of psychology concerned with the assessment and treatment of mental illness and behavioural problems. My other passion is publishing. You can find and purchase all my books within this site.
 							</p>
                                 <p className="mt-5 text-uppercase fw-bold">Ronda Solomou | <span className="fs-5 fw-light text-capitalize">Psychologist</span></p>
+                                <img className="mt-3 mb-2" src="./images/founder/signature.png" alt="" />
                                 <div className="d-flex justify-content-center">
-                                    <img src="./images/founder/signature.png" alt="" />
                                     <Link to="/about">
                                         <Button className="my-4 py-2 px-3" variant="success">About us</Button>
                                     </Link>

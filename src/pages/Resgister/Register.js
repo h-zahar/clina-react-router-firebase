@@ -2,10 +2,9 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import './Login.css';
 
-const Login = () => {
-    const { signInWithGoogle, setEmail, setPassword, loginUser } = useAuth();
+const Register = () => {
+    const { signInWithGoogle, setEmail, setPassword, createUser } = useAuth();
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -17,7 +16,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        loginUser();
+        createUser();
     }
 
     return (
@@ -25,7 +24,7 @@ const Login = () => {
             <div className="d-flex justify-content-center my-5">
                 <div className="shadow-lg p-5 rounded" style={{width: '300px'}}>
                     <Form onSubmit={handleSubmit} variant="dark">
-                    <h3 className="brand text-center mb-4">Login</h3>
+                        <h3 className="brand text-center mb-4">Register</h3>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
@@ -40,13 +39,13 @@ const Login = () => {
                     </Form.Group>
                     <div className="mt-4 d-flex flex-column justify-content-center">
                     <Button variant="success" type="submit">
-                        Login
+                        Register
                     </Button>
                     <p className="brand mt-4 text-center">Or, Sign in with Google</p>
                     <div className="d-flex justify-content-center">
                         <Button className="google-hover p-2 rounded-circle" onClick={signInWithGoogle} variant="dark"><i className="google-logo fa-brands fa-google"></i></Button>
                     </div>
-                    <p className="mt-4 text-center">New Here? <Link to="/register">Register</Link></p>
+                    <p className="mt-4 text-center">Already Here? <Link to="/register">Login</Link></p>
                     </div>
                     </Form>
                 </div>
@@ -55,4 +54,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Register;

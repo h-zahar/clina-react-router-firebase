@@ -4,8 +4,11 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import Logo from './logo.svg';
 import './Header.css';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+    const {user, logOut} = useAuth();
+
     return (
         <div style={{ position:"sticky", width:"100%", top:"0", zIndex:"2", background: "rgba(0, 0, 0, 0.9)" }}>
         <nav>
@@ -34,7 +37,17 @@ const Header = () => {
 
                             <Nav.Link as={HashLink} to="/about" className="me-lg-3">About</Nav.Link>
                             <Nav.Link as={HashLink} to="/contact" className="me-lg-3">Contact</Nav.Link> 
-                            <Nav.Link as={HashLink} to="/login" className="me-lg-3">Login</Nav.Link>
+                            {
+                                user?.email ?
+                                <div className="d-flex align-items-center">
+                                <span className="brand me-2">{user?.email}</span>
+                                <button className="hov-logout" style={{backgroundColor: 'transparent', border: 'none'}} onClick={logOut}>Logout</button>
+                                </div> :
+                                <div className="d-flex">
+                                <Nav.Link as={HashLink} to="/login" className="me-lg-3">Login</Nav.Link>
+                                <Nav.Link as={HashLink} to="/register" className="me-lg-3">Register</Nav.Link>
+                                </div>
+                            }
 
                         </Nav>
                     </Navbar.Collapse>
