@@ -43,8 +43,8 @@ const Header = () => {
                                 <span className="brand me-2">{user?.email}</span>
                                 <button className="hov-logout" style={{backgroundColor: 'transparent', border: 'none'}} onClick={logOut}>Logout</button>
                                 </div> :
-                                <div className="d-flex">
-                                <Nav.Link as={HashLink} to="/login" className="me-lg-3">Login</Nav.Link>
+                                <div className="d-flex justify-content-center">
+                                <Nav.Link as={HashLink} to="/login" className="me-3">Login</Nav.Link>
                                 <Nav.Link as={HashLink} to="/register" className="me-lg-3">Register</Nav.Link>
                                 </div>
                             }

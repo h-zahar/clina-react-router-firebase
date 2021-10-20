@@ -12,7 +12,7 @@ const Services = () => {
 
     return (
         <div id="services">
-            <div style={{paddingBottom: '180px'}} className="bg-semilight pt-5">
+            <div style={{paddingBottom: '150px'}} className="bg-semilight pt-5">
                 <h2 className="text-title my-5 text-center">Our Services</h2>
                 <div>
                     <div>

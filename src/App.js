@@ -11,6 +11,7 @@ import initializeAuthentication from './firebase/firebase.init';
 import Login from './pages/Login/Login';
 import Booking from './pages/PrivateRoute/Booking/Booking';
 import Register from './pages/Resgister/Register';
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
 initializeAuthentication();
 
@@ -39,9 +40,9 @@ function App() {
               <Login />  
             </Route>
             
-            <Route path="/book/:bookId">
+            <PrivateRoute path="/book/:bookId">
               <Booking />
-            </Route>
+            </PrivateRoute>
 
             <Route path="/register">
               <Register />

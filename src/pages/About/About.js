@@ -25,7 +25,7 @@ const About = () => {
                                 <p className="text-highname">Patients Satisfied</p>
                                 </div>
 
-                                <div className="ms-3">
+                                <div className="ms-md-3">
                                 <p className="brand mb-1"><strong>12000+</strong></p>
                                 <p className="text-highname">Phychologists</p>
                                 </div>
@@ -35,7 +35,7 @@ const About = () => {
 
                     <Col xs={12} md={6}>
                         <div>
-                            <img src="./images/about/about.jpg" alt="" />
+                            <img className="w-100 mt-md-0 mt-3" src="./images/about/about.jpg" alt="" />
                         </div>
                     </Col>
                 </Row>

@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithGoogle, setEmail, setPassword, loginUser } = useAuth();
+    const { signInWithGoogle, setEmail, setPassword, setUser, loginUser, setIsLoading } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/';
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -15,9 +18,23 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+        .then(result => {
+            setUser(result.user);
+            history.push(redirect_url);
+        })
+        .finally(() => setIsLoading(false));
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        loginUser();
+        loginUser()
+        .then(result => {
+            setUser(result.user);
+            history.push(redirect_url);
+        })
+        .finally(() => setIsLoading(false));
     }
 
     return (
@@ -44,7 +61,7 @@ const Login = () => {
                     </Button>
                     <p className="brand mt-4 text-center">Or, Sign in with Google</p>
                     <div className="d-flex justify-content-center">
-                        <Button className="google-hover p-2 rounded-circle" onClick={signInWithGoogle} variant="dark"><i className="google-logo fa-brands fa-google"></i></Button>
+                        <Button className="google-hover p-2 rounded-circle" onClick={handleGoogleSignIn} variant="dark"><i className="google-logo fa-brands fa-google"></i></Button>
                     </div>
                     <p className="mt-4 text-center">New Here? <Link to="/register">Register</Link></p>
                     </div>

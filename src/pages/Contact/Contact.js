@@ -11,7 +11,7 @@ const Contact = () => {
                 </div>
             </div>
             
-            <div style={{ maxWidth: '400px', minWidth: '300px', backgroundColor: '#fff' }} className="py-4 px-3 pb-5 mx-auto shadow border">
+            <div style={{ maxWidth: '400px', backgroundColor: '#fff' }} className="py-4 px-3 pb-5 mx-auto shadow border">
                     <Form>
                         <FormGroup>
                             <Form.Label></Form.Label>
